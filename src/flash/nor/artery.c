@@ -31,21 +31,23 @@
 #define MASK_VERSION_ADDR       0x1FFFF7F1
 #define FLASH_BASE_ADDR         0x08000000
 
-#define EFC_CTRL_REG            0x40022010
+#define EFC_BASE				0x40023C00
+
+#define EFC_CTRL_REG            (EFC_BASE + 0x10)
 #define EFC_PRGM_BIT            (1<<0)
 #define EFC_PGERS_BIT           (1<<1)
 #define EFC_RSTR_BIT            (1<<6)
 #define EFC_LOCK_BIT            (1<<7)
-#define EFC_FCKEY_REG           0x40022004
+#define EFC_FCKEY_REG           (EFC_BASE + 0x04)
 #define EFC_KEY1                0x45670123
 #define EFC_KEY2                0xCDEF89AB
 #define EFC_RDPRTEN             0x00A5
-#define EFC_STS_REG             0x4002200C
+#define EFC_STS_REG             (EFC_BASE + 0x0C)
 #define EFC_BSY_BIT             (1<<0)
 #define EFC_PRGMFLR_BIT         (1<<2)
 #define EFC_WRPRTFLR_BIT        (1<<4)
 #define EFC_PRCDN_BIT           (1<<5)
-#define EFC_ADDR_REG            0x40022014
+#define EFC_ADDR_REG            (EFC_BASE + 0x14)
 
 #define FLASH_ERASE_TIMEOUT 100     /* 10ms actually required */
 #define FLASH_WRITE_TIMEOUT 10      /* 42us actually required */
