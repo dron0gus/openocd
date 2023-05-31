@@ -9,8 +9,6 @@
 #endif
 #include "imp.h"
 
-extern const struct flash_driver artery_flash;
-
 /**
  * The list of built-in flash drivers.
  * @todo Make this dynamically extendable with loadable modules.
